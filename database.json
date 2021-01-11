@@ -1,27 +1,19 @@
 {
     "URLS": {
-        "google_finance": "https://www.google.com/finance#wptab=s:H4sIAAAAAAAAAOPQeMSozC3w8sc9YSmpSWtOXmMU4RJyy8xLzEtO9UnMS8nMSw9ITE_l2cXEHekfGhQfHOLv7B28iJU9DaIGAAUYQO1AAAAA"
+        "google_finance": "enter your google finance url"
     },
     "Watchlist": {
-        "EXAS" : 142,
-        "ACAD" : 58,
-        "ONEM" : 44,
-        "MIME" : 60,
-        "FTNT" : 151.5,
-        "SVMK" : 26,
-        "SMPL" : 31.5,
-        "PFPT" : 137.5,
-        "TME"  : 20,
-        "WORK" : 4
+        "stock1" : "target price",
+        "stock2" : "target price"
     },
     "headers": {
-        "User-Agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+        "User-Agent" : "Enter your user agent"
     },
     "chrome_atributes": {
-        "CHROME_PATH": "/usr/bin/google-chrome",
-        "CHROMEDRIVER_PATH": "/home/franser/Programs/Chromedriver/chromedriver"
+        "CHROME_PATH": "google chrome path",
+        "CHROMEDRIVER_PATH": "chromedriver path"
     },
     "phantomJs_atributes": {
-        "PHANTOMJS_PATH": "/home/franser/Programs/home/franser/Programs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+        "PHANTOMJS_PATH": "phantomJS path"
     }
 }
