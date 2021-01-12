@@ -1,0 +1,24 @@
+{
+    "URLS": { 
+        "google_finance": "enter your google finance url, NOT REQUIRED FOR 1.1"
+    },
+    "Watchlist": {
+        "stock1" : "target price",
+        "stock2" : "target price"
+    },
+    "headers": {
+        "User-Agent" : "Enter your user agent, NOT REQUIRED FOR 1.1"
+    },
+    "chrome_atributes": {
+        "CHROME_PATH": "google chrome path, NOT REQUIRED FOR 1.1",
+        "CHROMEDRIVER_PATH": "chromedriver path,  NOT REQUIRED FOR 1.1"
+    },
+    "phantomJs_atributes": {
+        "PHANTOMJS_PATH": "phantomJS path,  NOT REQUIRED FOR 1.1"
+    },
+    "email": {
+        "sender_email": "origin email",
+        "rec_email":  "destiny email, could be the same as the sender_email",
+        "password":  "two step verification code of the sender_email"
+      }
+}
