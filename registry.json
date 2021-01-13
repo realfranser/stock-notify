@@ -1,0 +1,14 @@
+{
+  "on_target_registry": {
+    "TSLA": {"target_price": 50, "on_target_date": "2021-01-13 01:49:35.444065", "yahoo_finance_link": "https://es.finance.yahoo.com/quote/TSLA?p=TSLA"}
+  }
+}
+{
+    "on_target_registry": {
+        "TSLA": {
+            "target_price": 50,
+            "on_target_date": "2021-01-13 12:08:54.618979",
+            "yahoo_finance_link": "https://es.finance.yahoo.com/quote/TSLA?p=TSLA"
+        }
+    }
+}

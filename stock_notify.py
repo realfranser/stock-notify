@@ -3,14 +3,17 @@ import requests as rq
 from bs4 import BeautifulSoup as bs
 import json
 import smtplib
+import os
+from datetime import datetime
 
+
+###EXTRACT DATA###
+data_file_path = os.path.dirname(os.path.realpath(__file__))
+with open(data_file_path+"/data.json", "r") as data_file:
+    data = json.load(data_file)
 
 # Yahoo finance url
 base_url = 'https://es.finance.yahoo.com/quote/ticker?p=ticker'
-
-###EXTRACT DATA###
-with open("data.json", "r") as data_file:
-    data = json.load(data_file)
 
 def get_price(url):
     """
@@ -31,8 +34,22 @@ def check_prices(watchlist):
     for ticker, target in data["Watchlist"].items():
         url = base_url.replace("ticker", ticker)
         price = float(get_price(url).replace(".","").replace(",","."))
+        # If the price is above the target, we will send it to the email
+        # and write the info in the registry.json file
         if price > target:
             on_target.append(ticker)
+            print(ticker)
+            on_target_info =  {
+                    "ticker": ticker,
+                    "target_price": target,
+                    "on_target_date": str(datetime.now()),
+                    "yahoo_finance_link": url 
+             }
+            with open(data_file_path+"/lab/registry.json", "r+") as registry_file:
+                new_registry_file = json.load(registry_file)
+                new_registry_file["on_target_registry"].append(on_target_info)
+                json.dump(new_registry_file, registry_file, indent=4)
+
     return on_target            
 
 def send_email(ticker_list):
@@ -47,8 +64,7 @@ def send_email(ticker_list):
     rec_email = data["email"]["rec_email"]
     password = data["email"]["password"]
     # Set the message content
-    message = "Subject: STOCK NOTIFY\n\nSome stocks have reached target
-    price!\n\n"
+    message = "Subject: STOCK NOTIFY\n\nSome stocks have reached target price!\n\n"
     for ticker in ticker_list:
         message += 'Tiker: {} -> Link: {}\n'.format(ticker, base_url.replace("ticker", ticker))
     # Setup the server and send the email    
@@ -62,6 +78,12 @@ def send_email(ticker_list):
 def main():
     on_target = check_prices(data["Watchlist"])
     send_email(on_target) if len(on_target) > 0 else exit()
+    # Remove from datafile the tickers on target
+    for ticker in on_target:
+        data["Watchlist"].pop(ticker)
+    with open(data_file_path+"/data.json", "r+") as data_file:
+        json.dump(data, data_file, indent= 4) 
+    exit(0)
 
 if __name__ == "__main__":
     main()
