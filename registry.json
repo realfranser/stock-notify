@@ -1,14 +1,22 @@
 {
-  "on_target_registry": {
-    "TSLA": {"target_price": 50, "on_target_date": "2021-01-13 01:49:35.444065", "yahoo_finance_link": "https://es.finance.yahoo.com/quote/TSLA?p=TSLA"}
-  }
-}
-{
-    "on_target_registry": {
-        "TSLA": {
+    "On_target_stocks": [
+        {
+            "tiker": "TICKER",
+            "price": "entry_price",
+            "date": "date_and_time",
+            "url": "yahoo_finance_url"
+        },
+        {
+            "ticker": "ONEM",
+            "target_price": 44,
+            "on_target_date": "2021-01-29 12:42:21.789968",
+            "yahoo_finance_link": "https://es.finance.yahoo.com/quote/ONEM?p=ONEM"
+        },
+        {
+            "ticker": "TSLA",
             "target_price": 50,
-            "on_target_date": "2021-01-13 12:08:54.618979",
+            "on_target_date": "2021-01-29 12:43:24.469018",
             "yahoo_finance_link": "https://es.finance.yahoo.com/quote/TSLA?p=TSLA"
         }
-    }
+    ]
 }

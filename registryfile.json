@@ -1,0 +1,13 @@
+{
+  "On_target_stocks": [
+    {
+      "tiker": "TICKER",
+      "price": "entry_price",
+      "date": "date_and_time",
+      "url": "yahoo_finance_url"
+    }
+  ]
+}
+
+
+
