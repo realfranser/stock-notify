@@ -17,6 +17,18 @@
             "target_price": 50,
             "on_target_date": "2021-01-29 12:43:24.469018",
             "yahoo_finance_link": "https://es.finance.yahoo.com/quote/TSLA?p=TSLA"
+        },
+        {
+            "ticker": "WORK",
+            "target_price": 44,
+            "on_target_date": "2021-02-16 15:36:04.477286",
+            "yahoo_finance_link": "https://es.finance.yahoo.com/quote/WORK?p=WORK"
+        },
+        {
+            "ticker": "SMPL",
+            "target_price": 31.5,
+            "on_target_date": "2021-03-09 16:36:02.263589",
+            "yahoo_finance_link": "https://es.finance.yahoo.com/quote/SMPL?p=SMPL"
         }
     ]
 }
